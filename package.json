@@ -1,0 +1,41 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "111111",
+  "repository": "https://github.com/EveCoffee/electron-test.git",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron index.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --publish always"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.1.1",
+    "electron-builder": "^22.9.1"
+  },
+  "build": {
+    "appId": "com.spacecycle.check-in-notify",
+    "mac": {
+      "category": "your.app.category.type",
+      "publish": ["github"],
+      "target": {
+        "target": "dmg",
+        "arch": [
+          "arm64"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.5"
+  },
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "http://localhost/update.json"
+    }
+  ]
+}
